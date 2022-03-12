@@ -10,6 +10,7 @@ public class FourBallsChallenge extends PApplet {
     public static final int RGB1 = 255;
     public static final int NO_OF_BALLS = 4;
     public static final int BALL_DIAMETER = 10;
+    public static final int INITIAL_BALL_POSITION_X = 0;
 
     ArrayList<Ball> balls = new ArrayList<>();
     public FourBallsChallenge(){
@@ -20,7 +21,7 @@ public class FourBallsChallenge extends PApplet {
         for(int ballIndex = 0;ballIndex<NO_OF_BALLS;ballIndex++){
             int ballOrder = ballIndex+1;
             int ballPositionY = computeBallYPositionForTheFrameHeight(ballOrder);
-            Ball ball = new Ball(0,ballPositionY,ballOrder, BALL_DIAMETER);
+            Ball ball = new Ball(INITIAL_BALL_POSITION_X,ballPositionY,ballOrder, BALL_DIAMETER);
             balls.add(ball);
         }
     }
