@@ -57,7 +57,7 @@ public class FourBallsChallenge extends PApplet {
         ellipse(ball.getPositionX(),ball.getPositionY(),ball.getDiameter(),ball.getDiameter());
         ball.moveByPositionX();
     }
-    private int computeBallYPositionForTheFrameHeight(int y) {
-        return y*FRAME_HEIGHT/(NO_OF_BALLS+1);
+    private int computeBallYPositionForTheFrameHeight(int ballOrder) {
+        return ballOrder*FRAME_HEIGHT/(NO_OF_BALLS+1);
     }
 }
